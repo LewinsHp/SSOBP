@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+
+<head>
+    <title>BP Single Sign On</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="Layanan Single Sign On BP BATAM">
+    <meta name="keywords" content="SSO, BPBATAM, Single Sign On, BPBATAM">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="36x36" href="../img/favicon/android-icon/android-icon-36x36.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon/android-icon/android-icon-48x48.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon/android-icon/android-icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon/android-icon/android-icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon/android-icon/android-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon/android-icon/android-icon-192x192.png">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicon/apple-icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicon/apple-icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicon/apple-icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-icon/apple-icon-180x180.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon/favicon-96x96.png">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../img/favicon.ico" sizes="196x196" />
+    <!-- FAVICON -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/components.css">
+    <link rel="stylesheet" href="../public/assets/font/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <style>
+        @media (max-width: 992px){
+            .app-content.content{
+                background: url("../public/img/new-bg.jpg") no-repeat center center;
+                background-size: cover ;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="vertical-layout vertical-menu-modern semi-dark-layout 1-column  navbar-sticky footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column" data-layout="semi-dark-layout">
+<!-- BEGIN: Content-->
+<div class="app-content content" style="">
+    <div class="content-overlay"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <!-- login page start -->
+            <section id="auth-login" class="row flexbox-container">
+                <div class="col-xl-8 col-11">
+                    <div class="card bg-authentication mb-0">
+                        <div class="row m-0">
+                            <!-- left section-login -->
+                            <div class="col-md-6 col-12 px-0">
+                                <div class="card disable-rounded-right mb-0 p-2 h-100 d-flex justify-content-center">
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            <div class="card-header pb-1">
+                                                <div class="card-title">
+                                                    <h4 class="text-center mb-2">DAFTAR PENGGUNA BARU</h4>
+                                                   </div>
+                                                </div>
+                                            <form action="" method="POST">
+                                                <div class="form-group">
+                                                    <label class="text-bold-600" for="auth-login">Daftar Sebagai</label>
+                                                    <select class="form-control" name="select">
+                                                        <option value="1">Pribadi</option>
+                                                        <option value="2">Perusahaan</option>
+                                                        <option value="3">Notaris</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group mb-50">
+                                                    <label class="text-bold-600" for="auth-login">Username (Nama Pengguna)</label>
+                                                    <div class="input-group">
+                                                        <input type='hidden' >
+                                                        <input type="text" class="form-control" name ="username" placeholder="Username (Nama Pengguna)" aria-label="Email" aria-describedby="basic-addon2">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-success glow"  data-toggle="modal" data-target="#primary"  tabindex="-1" type="button">Cek Ketersediaan</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="text-bold-600" for="auth-login">Nama Lengkap (Sesuai KTP) *</label>
+                                                    <input type="Nama Lengkap" class="form-control " name="Nama Lengkap Sesuai Ktp" placeholder="Nama Lengkap (Sesuai Ktp)"  required=""/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="text-bold-600" for="auth-login">Ponsel</label>
+                                                    <input type="ponsel" class="form-control " name="ponsel" placeholder="Ponsel"  required=""/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="text-bold-600" for="auth-login">NPWP Pribadi</label>
+                                                    <input type="npwp" class="form-control " name="npwp" placeholder="NPWP Pribadi"  required=""/>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- right section image -->
+                            <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form action="" method="POST">
+                                            <div class="form-group mb-10">
+                                                <label class="text-bold-600" for="auth-login">File Lampiran <b>PDF</b></label>
+                                                    <div class="custom-file ">
+                                                        <input type="file" class="custom-file-input file" name="file">
+                                                        <label class="custom-file-label Label">Pilih File</label>
+                                                        <span class="font-size-small">Lampirkan Scan Identitas & NPWP Pribadi</span>
+                                                    </div>
+                                                </div>
+                                            <div class="form-group">
+                                                <label class="text-bold-600" for="auth-login">NIK</label>
+                                                <input type="nik" class="form-control " name="nik" placeholder="NIK"  required=""/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-bold-600" for="auth-login">Email</label>
+                                                <input type="email" class="form-control " name="email" placeholder="Email"  required=""/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text-bold-600" for="auth-login">Alamat</label>
+                                                <input type="alamat" class="form-control" name="alamat" placeholder="Alamat"  required=""/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="float-right">
+                                            <a class="btn btn-secondary" href="login.html" role="button">kembali</a>
+                                            <button type="button" class="btn btn-primary btnregister">Daftar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- login page ends -->
+        </div>
+    </div>
+</div>
+<!-- END: Content-->
+</body>
+</html>

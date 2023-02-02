@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>BP Single Sign On</title>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="public/dist/sso.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="public/assets/js/gsap.min.js" />
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="36x36" href="img/favicon/android-icon/android-icon-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon/android-icon/android-icon-48x48.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon/android-icon/android-icon-72x72.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon/android-icon/android-icon-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon/android-icon/android-icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon/android-icon/android-icon-192x192.png">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon/apple-icon-180x180.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon/favicon-96x96.png">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="img/favicon.ico" sizes="196x196" />
+  <!-- FAVICON -->
+
+  <meta name="theme-color" content="#ffffff">
+  <!-- FAVICON END -->
+  <script src="public/assets/js/Sizzle.js"></script>
+  <script src="public/assets/js/owl.carousel.min.js"></script>
+
+</head>
+<style>
+  body {
+    font-family: "Karla", sans-serif;
+    background-color: #f4f6f9;
+  }
+</style>
+<body class="is-preload">
+<div id="wrapper">
+  <div id="bg"></div>
+  <div id="overlay"></div>
+  <div id="main">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: #ffd100">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="color: #ffffff">SSO BPBATAM</a>
+      <div class="nav-item dropdown ms-auto">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hai, User Pribadi</a>
+        <div class="dropdown-menu dropdown-menu-end">
+          <a href="" class="dropdown-item">Profile</a>
+          <a href="" class="dropdown-item">Settings</a>
+          <div class="dropdown-divider"></div>
+          <a href="auth/login.html" class="dropdown-item">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- akhir navbar -->
+  <div class="bg-header" style="padding-top: 5rem; padding-bottom: 3rem;" id="top">
+    <div class="container justify-content-center text-center" style="margin-top: 10px; margin-bottom: 50px;">
+      <div class="hide">
+        <div class="header-image">
+          <img src="img/Logo/logo.png" style="max-width: 70%; margin-left: 60px">
+          <h1 class="header">Selamat Datang Di </h1>
+          <h1 class="header"> Sistem Layanan Perizinan BP Batam
+            <span style="color:#6fcf97;"></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--body -->
+  <div class="container-lg p-0" style="margin-top: -50px;">
+    <div class="row">
+      <div class="callout callout-border shadow" style="height:auto;">
+        <h4 style="height: auto;" class="text-info text-bold">
+          <span style="color: #2a2a2a; font-size: 20px; display: inline-block">Pilih Sub-Sistem Layanan Perizinan yang akan Anda gunakan.</span>
+        </h4>
+      </div>
+    </div>
+    <!-- body -->
+    <div class="container-lg p-0" style="margin-top: -20px; background-color: #f4f6f9;">
+      <div class="row">
+        <div class="card-2 col-md-4">
+          <div class="callout callout-border shadow" style="height: 500px;">
+            <table style="height: 100px; margin-bottom: 10px;">
+              <tbody>
+                <tr>
+                  <td class="align-middle">
+                    <img src="img/Logo/logo-lms2.png" class="card-img-top" style="max-width: 55%; margin-left: 60px">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 style="height: 50px;" class="text-info text-bold">LMS DEV (Land Management System)</h5>
+            <div style="height: 150px; overflow: auto;">
+              <ul>
+                <li>Layanan Izin Peralihan Hak</li>
+                <li>Layanan Pengalokasian Tanah</li>
+                <li>Layanan Hak Atas Tanah</li>
+                <li>Layanan Hak Atas Tanggungan</li>
+                <li>Layanan Pertahanan Lainnya...</li>
+              </ul>
+            </div>
+            <div class="form-actions text-center">
+              <a href="https://sso.iboss.go.id/" class="btn btn-outline-warning" style="color: darkslategrey"><i class="fa fa-lock"></i> Masuk</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-3 col-md-4">
+          <div class="callout callout-sso shadow" style="height: 500px;">
+            <table style="height: 100px; margin-bottom: 10px;">
+              <tbody>
+              <tr>
+                <td class="align-middle">
+                  <img src="img/Logo/logo.png" class="img-fluid" style="max-width: 55%; margin-left: 60px">
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          <h5 style="height: 50px;" class="text-info text-bold">SPAM DEV (localhost)</h5>
+            <div style="height: 150px; overflow: auto;">
+              <ul>
+                <li>Layanan Rekomendasi Penyambungan Air</li>
+              </ul>
+            </div>
+            <div class="form-actions text-center">
+              <div class="form-actions text-center">
+                <a href="https://sso.iboss.go.id/" class="btn btn-outline-warning" style="color: darkslategrey"><i class="fa fa-lock"></i> Masuk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-4 col-md-4">
+          <div class="callout callout-sso shadow" style="height: 500px;">
+            <table style="height: 100px; margin-bottom: 10px;">
+              <tbody>
+                <tr>
+                  <td class="align-middle">
+                    <img src="img/Logo/logo.png" class="img-fluid" style="max-width: 55%; margin-left: 60px">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 style="height: 50px;" class="text-info text-bold">IBOSS</h5>
+            <div style="height: 150px; overflow: auto;">
+              <ul>
+                <li>Layanan Lalulintas Barang</li>
+                <li>Layanan Kepelabuhanan</li>
+              </ul>
+            </div>
+            <div class="form-actions text-center">
+              <div class="form-actions text-center">
+                <a href="https://sso.iboss.go.id/" class="btn btn-outline-warning" style="color: darkslategrey"><i class="fa fa-lock"></i> Masuk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- FOOTER -->
+    <footer class="w-100 py-2 bg-dark">
+      <div class="container py-4">
+        <div class="row text-white">
+          <div class="col-md-4">
+            <img src="img/Logo/logo.png" class="img-fluid" style="max-width: 20%;">
+            <img src="img/Logo/BP-Batam.png" class="img-fluid" style="max-width:50%;">
+            <br>
+            <p class="small text-white">Badan Pengusahaan (BP) Batam lembaga/instansi pemerintah pusat yang dibentuk berdasarkan Peraturan Pemerintah Republik
+              Indonesia Nomor 46 Tahun 2007 dengan tugas dan wewenang melaksanakan pengelolaan, pengembangan dan pembangunan kawasan sesuai dengan fungsi-fungsi kawasan.</p>
+            <p class="small text-white mb-0">Media Sosial Kami </p>
+            <div class="row">
+              <div class="col-1 text-white"><i class="fa fa-facebook"></i></div>
+              <div class="col-1 text-white"><i class="fa fa-twitter"></i></div>
+              <div class="col-1 text-white"><i class="fa fa-instagram"></i></div>
+              <div class="col-1 text-white"><i class="fa fa-youtube"></i></div>
+              <div class="col-1 text-white"><i class="fa fa-google"></i></div>
+            </div>
+            <br>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Kantor Pusat</h5>
+            <ul class="list-unstyled text-muted">
+              <li class="text-white">Jl. Ibnu Sutowo No. 1 Batam Centre Batam Kepulauan Riau,</li>
+              <li class="text-white">Indonesia, 29400</li>
+              <li class="text-white">+62778-462047 / 462048</li>
+              <li class="text-white">humas@bpbatam.go.id</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-3">Kantor Layanan Perizinan</h5>
+            <ul class="list-unstyled text-muted">
+              <li class="text-white"> Gedung Sumatera Expo (Mall Pelayanan Publik) Batam Center Lantai Dasar, Kota Batam, Propinsi Kepulauan Riau </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Tautan Terkait</h5>
+            <ul class="list-unstyled text-muted">
+              <li class="text-white"> Website BP Batam </li>
+              <li class="text-white"> Website Kantor Pelabuhan Batu Ampar </li>
+              <li class="text-white"> Website RS BP Batam </li>
+              <li class="text-white"> Website Pusat Data dan Sistem Informasi </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  <script>
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+  nav: false,
+  margin: 90,
+  responsive: {
+  0: {
+  items: 1,
+  },
+  600: {
+  items: 2,
+  },
+  1000: {
+  items: 3,
+  },
+  },
+  });
+  </script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    // gsap.to(".card-1", {
+    //   duration: 1.5,
+    //   y: -100,
+    //   ease: "expo.inOut",
+    //   scrollTrigger: {
+    //     start: "top 100%",
+    //     end: "top 50%",
+    //     trigger: ".card-1",
+    //     scrub: 3,
+    //   },
+    // });
+    gsap.to(".card-2", {
+      duration: 1.5,
+      y: -100,
+      ease: "expo.inOut",
+      scrollTrigger: {
+        start: "top 90%",
+        end: "top 50%",
+        trigger: ".card-2",
+        scrub: 3,
+      },
+    });
+    gsap.to(".card-3", {
+      duration: 1.5,
+      y: -100,
+      ease: "expo.inOut",
+      scrollTrigger: {
+        start: "top 80%",
+        end: "top 50%",
+        trigger: ".card-3",
+        scrub: 3,
+      },
+    });
+    gsap.to(".card-4", {
+      duration: 1.5,
+      y: -100,
+      ease: "expo.inOut",
+      scrollTrigger: {
+        start: "top 70%",
+        end: "top 50%",
+        trigger: ".card-4",
+        scrub: 3,
+      },
+    });
+    // gsap.to(".card-5", {
+    //   duration: 1.5,
+    //   y: -100,
+    //   ease: "expo.inOut",
+    //   scrollTrigger: {
+    //     start: "top 100%",
+    //     end: "top 50%",
+    //     trigger: ".card-5",
+    //     scrub: 3,
+    //   },
+    // });
+    // gsap.to(".card-6", {
+    //   duration: 1.5,
+    //   y: -100,
+    //   ease: "expo.inOut",
+    //   scrollTrigger: {
+    //     start: "top 90%",
+    //     end: "top 50%",
+    //     trigger: ".card-6",
+    //     scrub: 3,
+    //   },
+    // });
+    // gsap.to(".card-7", {
+    //   duration: 1.5,
+    //   y: -100,
+    //   ease: "expo.inOut",
+    //   scrollTrigger: {
+    //     start: "top 80%",
+    //     end: "top 50%",
+    //     delay: 0.2,
+    //     trigger: ".card-7",
+    //     scrub: 3,
+    //   },
+    // });
+    // gsap.to(".card-8", {
+    //   duration: 1.5,
+    //   y: -100,
+    //   ease: "expo.inOut",
+    //   scrollTrigger: {
+    //     start: "top 70%",
+    //     end: "top 50%",
+    //     trigger: ".card-8",
+    //     scrub: 3,
+    //   },
+    // });
+    gsap.from("nav", {
+      duration: 0.5,
+      delay: 5.5,
+      opacity: 0,
+    });
+    // gsap.from(".background", {
+    //   duration: 1.5,
+    //   y: "-100%",
+    //   delay: 0.6,
+    //   ease: "expo.inOut",
+    // });
+    // gsap.from(".video-content", {
+    //   duration: 1,
+    //   x: "100%",
+    //   delay: 2.5,
+    //   ease: "expo.out",
+    // });
+    // gsap.from(".head", {
+    //   duration: 1,
+    //   y: "103%",
+    //   ease: "expo.inOut",
+    //   delay: 3.1,
+    // });
+    // gsap.from(".desc", {
+    //   duration: 1,
+    //   y: "-115%",
+    //   ease: "expo.inOut",
+    //   delay: 3.7,
+    // });
+    // gsap.from(".btn-group", {
+    //   duration: 1,
+    //   x: "-105%",
+    //   ease: "expo.out",
+    //   delay: 4.7,
+    // });
+    // gsap.from(".scroll", {
+    //   duration: 1,
+    //   y: "107%",
+    //   ease: "expo.inOut",
+    //   delay: 6.3,
+    // });
+    // gsap.from("svg", {
+    //   duration: 1.5,
+    //   y: "-100%",
+    //   delay: 1.2,
+    //   ease: "expo.inOut",
+    // });
+  </script>
+
+  <!-- script animation menu -->
+  <script>
+    $(document).ready(function () {
+      $("#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4").click(function () {
+        $(this).toggleClass("open");
+      });
+    });
+  </script>
+</body>
+</html>

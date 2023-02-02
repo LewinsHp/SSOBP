@@ -1,0 +1,91 @@
+html {
+    font-size: 15px;
+    height: 100%;
+    letter-spacing: 0.01rem;
+}
+
+html body {
+    height: 100%;
+    background-color: #F2F4F4;
+    direction: ltr;
+}
+
+html body.bg-full-screen-image {
+    background: url(../../img/new-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+html body.blank-page .content {
+    margin-left: 0;
+}
+
+html body.blank-page .content.app-content {
+    overflow: overlay;
+    overflow-x: hidden;
+}
+
+html body.blank-page .content-wrapper {
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+/*background */
+html body.blank-page .content-wrapper .flexbox-container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-image: url("../../img/new-bg.jpg");
+}
+
+/* Image */
+/* ----- */
+/*Background Image */
+.bg-cover {
+    background-size: cover !important;
+}
+
+.background-repeat {
+    background-repeat: repeat !important;
+}
+
+.background-no-repeat {
+    background-repeat: no-repeat !important;
+}
+
+.img-xl {
+    width: 64px !important;
+    height: 64px !important;
+}
+
+.img-lg {
+    width: 44px !important;
+    height: 44px !important;
+}
+
+.img-sm {
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.img-xs {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+/* Font Sizing */
+.font-size-large {
+    font-size: 1.2rem;
+}
+
+.font-size-base {
+    font-size: 1rem;
+}
+
+.font-size-small {
+    font-size: 0.8rem;
+}
+
+.font-size-xsmall {
+    font-size: 0.75rem;
+}
